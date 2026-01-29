@@ -26,8 +26,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-app.use(express.static('public'));
-
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 500,

@@ -5,9 +5,14 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "cleanup": "lsof -ti:3000 | xargs kill -9 2>/dev/null || echo 'Port 3000 is already free'"
   },
-  "keywords": ["password-manager", "encryption", "zero-knowledge"],
+  "keywords": [
+    "password-manager",
+    "encryption",
+    "zero-knowledge"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
